@@ -1,0 +1,135 @@
+/* Reset + base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #1f2937;
+}
+
+/* Main container */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Headings */
+h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+h2 {
+  margin: 8px 0 20px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #374151;
+}
+
+/* Form card */
+.form-card {
+  background: #ffffff;
+  width: 380px;
+  padding: 25px 30px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Inputs & dropdowns */
+.form-card input,
+.form-card select {
+  width: 100%;
+  padding: 8px 10px;
+  margin-top: 6px;
+  margin-bottom: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.form-card input:focus,
+.form-card select:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+/* Mobile row */
+.mobile-row {
+  display: flex;
+  gap: 10px;
+}
+
+.mobile-row input:first-child {
+  width: 70px;
+  text-align: center;
+  background-color: #f3f4f6;
+}
+
+.mobile-row input:last-child {
+  flex: 1;
+}
+
+/* Error & success messages */
+.error {
+  color: #dc2626;
+  font-size: 12px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.success {
+  color: #16a34a;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Button row */
+.button-row {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* Buttons */
+button {
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Cancel button */
+.cancel-btn {
+  background-color: #e5e7eb;
+  color: #111827;
+}
+
+.cancel-btn:hover {
+  background-color: #d1d5db;
+}
+
+/* Submit button */
+.submit-btn {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.submit-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* Disabled state */
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
