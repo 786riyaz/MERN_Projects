@@ -1,0 +1,370 @@
+/* src/styles.css */
+/* ===========================================================
+   GLOBAL THEME VARIABLES
+   =========================================================== */
+:root {
+  --bg: #f5f7fb;
+  --text: #111;
+  --text-muted: #555;
+  --card-bg: #ffffff;
+  --nav-bg: #ffffff;
+  --input-bg: #ffffff;
+  --input-border: #d0d7e2;
+  --accent: #3563e9;
+  --accent-hover: #2b4fc7;
+  --border: #e3e7ee;
+  --shadow: rgba(0, 0, 0, 0.08);
+}
+
+body.dark {
+  --bg: #0f0f11;
+  --text: #e9e9e9;
+  --text-muted: #b5b5b5;
+  --card-bg: #1a1b1e;
+  --nav-bg: #18191b;
+  --input-bg: #242529;
+  --input-border: #3b3d42;
+  --accent: #5c82ff;
+  --accent-hover: #3f63e6;
+  --border: #2e2e33;
+  --shadow: rgba(0, 0, 0, 0.45);
+}
+
+/* ===========================================================
+   BASE STYLING
+   =========================================================== */
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, Arial;
+  margin: 0;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* ===========================================================
+   NAVIGATION BAR
+   =========================================================== */
+.nav {
+  background: var(--nav-bg);
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px var(--shadow);
+  transition: background 0.25s ease;
+}
+
+.nav-left .brand {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.nav-right a,
+.nav-right .btn-link {
+  margin-left: 14px;
+  font-size: 15px;
+  color: var(--text);
+  transition: color 0.25s ease;
+}
+
+.btn-link {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--accent) !important;
+}
+
+/* ===========================================================
+   LAYOUT CONTAINER
+   =========================================================== */
+
+.container {
+  padding: 20px;
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+/* ===========================================================
+   CARDS
+   =========================================================== */
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  padding: 18px;
+  border-radius: 10px;
+  margin: 15px 0;
+  box-shadow: 0 6px 16px var(--shadow);
+  transition: background 0.25s ease, border 0.25s ease;
+}
+
+.card.small {
+  max-width: 420px;
+  margin: 40px auto;
+}
+
+.card h2,
+.card h3 {
+  margin-top: 0;
+}
+
+/* ===========================================================
+   INPUT FIELDS (NO OVERFLOW)
+   =========================================================== */
+
+input,
+textarea,
+select {
+  width: 100%;
+  box-sizing: border-box; /* FIXES OVERFLOW */
+  padding: 10px 12px;
+  margin: 10px 0;
+  background: var(--input-bg);
+  color: var(--text);
+  border: 1px solid var(--input-border);
+  border-radius: 6px;
+  font-size: 15px;
+  transition: background 0.25s ease, border 0.25s ease;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Placeholder */
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-muted);
+}
+
+/* Focus */
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+/* ===========================================================
+   BUTTONS (IMPROVED LOOK)
+   =========================================================== */
+
+.btn {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 500;
+  margin-top: 10px;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn:hover {
+  background: var(--accent-hover);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+/* Small buttons */
+.btn-small {
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  margin: 3px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-small.danger {
+  background: #d9534f;
+}
+
+/* ===========================================================
+   GRID
+   =========================================================== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 15px;
+}
+
+/* ===========================================================
+   TABLES
+   =========================================================== */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+
+.table tr:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+body.dark .table tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ===========================================================
+   INFO & ERROR MESSAGES
+   =========================================================== */
+
+.error {
+  background: #ffdddd;
+  color: #a10000;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+body.dark .error {
+  background: #542020;
+  color: #ffbaba;
+}
+
+.info {
+  background: #dbe9ff;
+  color: #0b3b73;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+body.dark .info {
+  background: #203459;
+  color: #dae7ff;
+}
+
+/* ===========================================================
+   SPACING HELPERS
+   =========================================================== */
+.mt {
+  margin-top: 14px;
+}
+
+.center {
+  text-align: center;
+}
+
+
+/* ===========================================================
+   MOBILE RESPONSIVENESS
+   =========================================================== */
+
+/* Reduce padding & card spacing on small screens */
+@media (max-width: 768px) {
+  .container {
+    padding: 12px;
+    margin: 10px auto;
+  }
+
+  .card {
+    padding: 14px;
+    margin: 10px 0;
+  }
+
+  .card.small {
+    max-width: 100%;
+    margin: 20px auto;
+  }
+
+  /* Navbar becomes vertical stack */
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px;
+  }
+
+  .nav-right {
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  /* Make buttons larger for touch usability */
+  .btn,
+  .btn-small {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* TABLE → MOBILE CARD LIST */
+  .table {
+    display: block;
+    width: 100%;
+  }
+
+  .table thead {
+    display: none; /* Hide headings */
+  }
+
+  .table tbody {
+    display: grid;
+    gap: 12px;
+  }
+
+  .table tr {
+    display: block;
+    padding: 12px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+  }
+
+  .table td {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: none;
+  }
+
+  .table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: var(--text-muted);
+  }
+
+  /* Fix actions alignment */
+  .table td:last-child {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+  }
+
+  /* Inputs & Select */
+  input,
+  textarea,
+  select {
+    font-size: 16px; /* Better for mobile keyboards */
+  }
+
+  /* Modal responsiveness */
+  .modal-box {
+    width: 90% !important;
+    max-width: 400px;
+  }
+
+  select {
+    padding: 12px;
+  }
+}
