@@ -1,0 +1,207 @@
+[{
+  "_id": {
+    "$oid": "692d997c88dcf48a995513a6"
+  },
+  "firstName": "RiyazKhan",
+  "lastName": "Pathan",
+  "email": "moh.riyazpathan@gmail.com",
+  "phone": "9909221451",
+  "passwordHash": "$2b$10$UMZlPOToeuJ1CtQw6ZcYvOUxnzzv4.soZV5QmDFZDZ8GJ8ErgVuUa",
+  "role": "admin",
+  "avatarUrl": "/uploads/Profile_Pictures_1_M.jpg",
+  "addresses": [
+    {
+      "label": "Home",
+      "line1": "Danilimda",
+      "city": "Ahmedabad",
+      "postalCode": "380028",
+      "lat": 22.98,
+      "lng": 72.57,
+      "_id": {
+        "$oid": "692d997c88dcf48a995513a7"
+      }
+    },
+    {
+      "label": "Office",
+      "line1": "Streebo, Makarba",
+      "city": "Ahmedabad",
+      "postalCode": "380051",
+      "lat": 22.99,
+      "lng": 72.5,
+      "_id": {
+        "$oid": "692d997c88dcf48a995513a8"
+      }
+    },
+    {
+      "label": "Other",
+      "line1": "Vatva",
+      "city": "Ahmedabad",
+      "postalCode": "382440",
+      "lat": 22.95,
+      "lng": 72.6,
+      "_id": {
+        "$oid": "693139e27dde480587e0410c"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-12-01T13:34:52.983Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-04T08:36:41.890Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "692fff09b0f6bc46c16bba74"
+  },
+  "firstName": "Tasin",
+  "lastName": "Pathan",
+  "email": "khantasin2005@gmail.com",
+  "phone": "9974031096",
+  "passwordHash": "$2b$10$NwEYWM/jI7qpuzWj3ZIjKerLJjnONvmyrCmtSI5c9xC06DD/yHbdW",
+  "gender": "female",
+  "role": "customer",
+  "avatarUrl": "/uploads/Profile_Pictures_1_F.jpg",
+  "addresses": [
+    {
+      "label": "Home",
+      "line1": "221 Baker Street",
+      "city": "London",
+      "postalCode": "400001",
+      "lat": 19.07,
+      "lng": 72.87,
+      "_id": {
+        "$oid": "692fff09b0f6bc46c16bba75"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-12-03T09:12:41.153Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-03T09:12:41.153Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69300ab739d6b0e7c2beeeca"
+  },
+  "firstName": "Arbaz",
+  "lastName": "Shaikh",
+  "email": "arbazshaikh@gmail.com",
+  "phone": "6351973814",
+  "passwordHash": "$2b$10$YBmCK5c5oepCrup6tW6SkuNtmbrKjXSUEYLQUX67NzlzFnXOseNpO",
+  "gender": "male",
+  "role": "contractor",
+  "avatarUrl": "/uploads/Profile_Pictures_1_M.jpg",
+  "addresses": [
+    {
+      "label": "Home",
+      "line1": "221 Baker Street",
+      "city": "London",
+      "postalCode": "400001",
+      "lat": 19.07,
+      "lng": 72.87,
+      "_id": {
+        "$oid": "69300ab739d6b0e7c2beeecb"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-12-03T10:02:31.263Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-03T10:02:31.263Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6931a925f651b481edd5da85"
+  },
+  "firstName": "Customer1",
+  "lastName": "Customer1",
+  "email": "customer1@gmail.com",
+  "phone": "9974031097",
+  "passwordHash": "$2b$10$dDpK8d1xNrfBXjd4DkNdYeev.lXKTOyfF74uLAdXsBTEqb40s1ihS",
+  "gender": "female",
+  "role": "customer",
+  "avatarUrl": "/uploads/Profile_Pictures_1_F.jpg",
+  "addresses": [
+    {
+      "label": "Home",
+      "line1": "221 Baker Street",
+      "city": "London",
+      "postalCode": "400001",
+      "lat": 19.07,
+      "lng": 72.87,
+      "_id": {
+        "$oid": "692fff09b0f6bc46c16bba75"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-12-03T09:12:41.153Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-03T09:12:41.153Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6931a93ef651b481edd5da86"
+  },
+  "firstName": "Contractor1",
+  "lastName": "Contractor1",
+  "email": "contractor1@gmail.com",
+  "phone": "6351973815",
+  "passwordHash": "$2b$10$LOGgqZA4jLvNfgGtBXMnxOm9joBX0vRbOE0oCsrYiw2P9uo.nkJ0m",
+  "gender": "male",
+  "role": "contractor",
+  "avatarUrl": "/uploads/Profile_Pictures_1_M.jpg",
+  "addresses": [
+    {
+      "label": "Home",
+      "line1": "221 Baker Street",
+      "city": "London",
+      "postalCode": "400001",
+      "lat": 19.07,
+      "lng": 72.87,
+      "_id": {
+        "$oid": "69300ab739d6b0e7c2beeecb"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-12-03T10:02:31.263Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-03T10:02:31.263Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "694d03837202299aeb02522b"
+  },
+  "firstName": "Admin",
+  "lastName": "1",
+  "email": "admin1@gmail.com",
+  "phone": "9909221455",
+  "passwordHash": "$2b$10$LVjydNPrwdE.xCpFWncx2ebiHon43IgZA/JmZYRB9k8xJpnB4ldzm",
+  "gender": "male",
+  "role": "admin",
+  "avatarUrl": "/uploads/Profile_Pictures_1_M.jpg",
+  "addresses": [],
+  "createdAt": {
+    "$date": "2025-12-25T09:27:31.893Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-25T09:27:31.893Z"
+  },
+  "__v": 0
+}]

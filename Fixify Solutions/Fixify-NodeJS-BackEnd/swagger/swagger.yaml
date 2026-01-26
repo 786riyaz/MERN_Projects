@@ -1,0 +1,542 @@
+openapi: 3.0.3
+info:
+  title: Fixify Backend API
+  version: 1.0.0
+  description: Backend API for Fixify (auth, users, services)
+
+servers:
+  - url: http://localhost:5000
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  schemas:
+    User:
+      type: object
+      properties:
+        _id:
+          type: string
+        firstName:
+          type: string
+        lastName:
+          type: string
+        email:
+          type: string
+        phone:
+          type: string
+        role:
+          type: string
+          enum: [customer, contractor, admin]
+        avatarUrl:
+          type: string
+        addresses:
+          type: array
+          items:
+            type: object
+            properties:
+              label: { type: string }
+              line1: { type: string }
+              city: { type: string }
+              postalCode: { type: string }
+              lat: { type: number }
+              lng: { type: number }
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+
+    Service:
+      type: object
+      properties:
+        _id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        basePrice:
+          type: number
+        category:
+          type: string
+        iconUrl:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+
+    RegisterRequest:
+      type: object
+      required: [firstName, lastName, email, phone, password]
+      properties:
+        firstName: { type: string }
+        lastName: { type: string }
+        email: { type: string }
+        phone: { type: string }
+        password: { type: string }
+        role:
+          type: string
+          enum: [customer, contractor, admin]
+        avatarUrl: { type: string }
+        addresses:
+          type: array
+          items:
+            type: object
+            properties:
+              label: { type: string }
+              line1: { type: string }
+              city: { type: string }
+              postalCode: { type: string }
+              lat: { type: number }
+              lng: { type: number }
+
+    LoginRequest:
+      type: object
+      required: [emailOrPhone, password]
+      properties:
+        emailOrPhone: { type: string }
+        password: { type: string }
+
+    ForgotPasswordRequest:
+      type: object
+      required: [email]
+      properties:
+        email: { type: string }
+
+    VerifyOtpRequest:
+      type: object
+      required: [email, otp]
+      properties:
+        email: { type: string }
+        otp: { type: string }
+
+    ResetPasswordRequest:
+      type: object
+      required: [email, otp, newPassword]
+      properties:
+        email: { type: string }
+        otp: { type: string }
+        newPassword: { type: string }
+
+    ServiceCreateRequest:
+      type: object
+      required: [name, basePrice]
+      properties:
+        name: { type: string }
+        description: { type: string }
+        basePrice: { type: number }
+        category: { type: string }
+        iconUrl: { type: string }
+
+paths:
+  /auth/register:
+    post:
+      summary: Register a new user
+      tags: [Auth]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RegisterRequest"
+      responses:
+        "201":
+          description: User registered
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success: { type: boolean }
+                  message: { type: string }
+                  data:
+                    $ref: "#/components/schemas/User"
+        "400":
+          description: Validation or duplicate error
+
+  /auth/login:
+    post:
+      summary: Login user with email or phone
+      tags: [Auth]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LoginRequest"
+      responses:
+        "200":
+          description: Login successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success: { type: boolean }
+                  message: { type: string }
+                  token: { type: string }
+                  user:
+                    $ref: "#/components/schemas/User"
+        "401":
+          description: Invalid credentials
+
+  /auth/profile:
+    get:
+      summary: Get profile from JWT payload
+      tags: [Auth]
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Profile data (from token)
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success: { type: boolean }
+                  user:
+                    type: object
+        "401":
+          description: Unauthorized
+
+  /auth/forgot-password:
+    post:
+      summary: Send OTP to email for password reset
+      tags: [Auth]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ForgotPasswordRequest"
+      responses:
+        "200":
+          description: OTP sent
+
+  /auth/verify-otp:
+    post:
+      summary: Verify OTP
+      tags: [Auth]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/VerifyOtpRequest"
+      responses:
+        "200":
+          description: OTP verified
+        "400":
+          description: Invalid or expired OTP
+
+  /auth/reset-password:
+    post:
+      summary: Reset password using OTP
+      tags: [Auth]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ResetPasswordRequest"
+      responses:
+        "200":
+          description: Password reset successful
+
+  /users/me:
+    get:
+      summary: Get current user profile
+      tags: [Users]
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Current user
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success: { type: boolean }
+                  data:
+                    $ref: "#/components/schemas/User"
+        "401":
+          description: Unauthorized
+
+    put:
+      summary: Update current user profile
+      tags: [Users]
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/User"
+      responses:
+        "200":
+          description: Updated user
+
+  /users/all:
+    get:
+      summary: Get all users (admin)
+      tags: [Users]
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: List of users
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success: { type: boolean }
+                  count: { type: integer }
+                  data:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/User"
+
+  /users/{id}:
+    get:
+      summary: Get user by ID
+      tags: [Users]
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: User found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success: { type: boolean }
+                  data:
+                    $ref: "#/components/schemas/User"
+
+    delete:
+      summary: Delete user by ID
+      tags: [Users]
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: User deleted
+
+  /services/services:
+    get:
+      summary: Get all services
+      tags: [Services]
+      responses:
+        "200":
+          description: List of services
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success: { type: boolean }
+                  count: { type: integer }
+                  data:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Service"
+
+  /services/service:
+    post:
+      summary: Create a new service
+      tags: [Services]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ServiceCreateRequest"
+      responses:
+        "201":
+          description: Service created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success: { type: boolean }
+                  data:
+                    $ref: "#/components/schemas/Service"
+
+  /services/service/{id}:
+    put:
+      summary: Update service by ID
+      tags: [Services]
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ServiceCreateRequest"
+      responses:
+        "200":
+          description: Service updated
+
+    delete:
+      summary: Delete service by ID
+      tags: [Services]
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Service deleted
+
+  /logs/backend-logs:
+    get:
+      summary: List all log files with metadata
+      tags: [Logs]
+      responses:
+        "200":
+          description: List of log files
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success: { type: boolean }
+                  files:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        filename: { type: string }
+                        size: { type: string, example: "12.45 KB" }
+                        createdAt:
+                          type: string
+                          format: date-time
+                        updatedAt:
+                          type: string
+                          format: date-time
+
+  /logs/backend-logs/{filename}:
+    get:
+      summary: Read full content of a log file
+      tags: [Logs]
+      parameters:
+        - in: path
+          name: filename
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Log file content
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success: { type: boolean }
+                  content: { type: string }
+
+  /logs/backend-logs/{filename}/download:
+    get:
+      summary: Download entire log file
+      tags: [Logs]
+      parameters:
+        - in: path
+          name: filename
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: File download
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+
+  /logs/backend-logs/{filename}/last/{count}:
+    get:
+      summary: Get last N lines from a log file
+      tags: [Logs]
+      parameters:
+        - in: path
+          name: filename
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: count
+          required: true
+          schema:
+            type: integer
+            example: 50
+      responses:
+        "200":
+          description: Last N lines of the log file
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success: { type: boolean }
+                  count: { type: integer }
+                  content: { type: string }
+
+  /logs/backend-logs/{filename}/last/{count}/download:
+    get:
+      summary: Download last N lines from a log file
+      tags: [Logs]
+      parameters:
+        - in: path
+          name: filename
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: count
+          required: true
+          schema:
+            type: integer
+            example: 100
+      responses:
+        "200":
+          description: Partial log download
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary

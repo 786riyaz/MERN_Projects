@@ -1,0 +1,47 @@
+project/
+│
+├── config/
+│   └── db.js                     # MongoDB connection
+│
+├── controllers/
+│   ├── authController.js         # Login, register, OTP, reset password
+│   ├── userController.js         # Get/update profile, change password
+│   └── serviceController.js      # CRUD for services
+│
+├── middleware/
+│   ├── authMiddleware.js         # JWT verification
+│   └── errorMiddleware.js        # Global error handler
+│
+├── models/
+│   ├── User.js                   # User schema
+│   ├── Service.js                # Service schema
+│   └── Otp.js                    # OTP schema
+│
+├── routes/
+│   ├── authRoutes.js             # /auth endpoints
+│   ├── userRoutes.js             # /users endpoints
+│   ├── serviceRoutes.js          # /services endpoints
+│   └── logRoutes.js              # /logs endpoints (log viewer)
+│
+├── utils/
+│   ├── logger.js                 # Winston logger + daily rotate
+│   ├── generateOTP.js            # OTP generator
+│   ├── sendEmail.js              # Email sender
+│   └── sendOTP.js                # OTP handler + email
+│
+├── logs/
+│   ├── 2025-01-01.log            # Auto-generated daily rotated logs
+│   ├── 2025-01-02.log
+│   └── ...
+│
+├── public/
+│   └── uploads/                  # Uploaded images if needed
+│
+├── swagger/
+│   └── swagger.yaml              # API documentation (OpenAPI 3.0.3)
+│
+├── .env                          # Environment variables
+├── .gitignore                    # Node ignore rules
+├── index.js                      # Main server file (Express boot)
+├── package.json
+└── package-lock.json

@@ -1,0 +1,35 @@
+{
+  "name": "fixify-nodejs-backend",
+  "version": "1.0.0",
+  "description": "For the Fixify project Node JS BackEnd Code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/786riyaz/Fixify-NodeJS-Backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/786riyaz/Fixify-NodeJS-Backend/issues"
+  },
+  "homepage": "https://github.com/786riyaz/Fixify-NodeJS-Backend#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongo": "^0.1.0",
+    "mongoose": "^9.0.0",
+    "morgan": "^1.10.1",
+    "nodemailer": "^7.0.11",
+    "nodemon": "^3.1.11",
+    "swagger-ui-express": "^5.0.1",
+    "winston": "^3.18.3",
+    "winston-daily-rotate-file": "^5.0.0",
+    "yamljs": "^0.3.0"
+  }
+}

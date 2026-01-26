@@ -1,0 +1,174 @@
+[{
+  "_id": {
+    "$oid": "6932860f6232a68968367649"
+  },
+  "customer_id": {
+    "$oid": "692fff09b0f6bc46c16bba74"
+  },
+  "service_id": {
+    "$oid": "692f3d791166b1727bd9d46c"
+  },
+  "contractor_id": {
+    "$oid": "69300ab739d6b0e7c2beeeca"
+  },
+  "address": {
+    "line1": "Street 12",
+    "city": "Mumbai",
+    "postalCode": "400001"
+  },
+  "rejected_by": [],
+  "issue_images": [],
+  "status": "in_progress",
+  "createdAt": {
+    "$date": "2025-12-05T07:13:19.809Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T11:22:15.610Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6932862d6232a6896836764e"
+  },
+  "customer_id": {
+    "$oid": "692fff09b0f6bc46c16bba74"
+  },
+  "service_id": {
+    "$oid": "692f3d791166b1727bd9d46c"
+  },
+  "contractor_id": null,
+  "address": {
+    "line1": "Street 12",
+    "city": "Mumbai",
+    "postalCode": "400001"
+  },
+  "rejected_by": [
+    {
+      "$oid": "69300ab739d6b0e7c2beeeca"
+    }
+  ],
+  "issue_images": [],
+  "status": "cancelled",
+  "createdAt": {
+    "$date": "2025-12-05T07:13:49.865Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T10:03:43.682Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6932865a6232a68968367655"
+  },
+  "customer_id": {
+    "$oid": "6931a925f651b481edd5da85"
+  },
+  "service_id": {
+    "$oid": "692f3d791166b1727bd9d46c"
+  },
+  "contractor_id": {
+    "$oid": "6931a93ef651b481edd5da86"
+  },
+  "address": {
+    "line1": "Street 12",
+    "city": "Mumbai",
+    "postalCode": "400001"
+  },
+  "rejected_by": [],
+  "issue_images": [],
+  "status": "assigned",
+  "createdAt": {
+    "$date": "2025-12-05T07:14:34.204Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-06T20:03:02.652Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6932ac79213549af4805d757"
+  },
+  "customer_id": {
+    "$oid": "692fff09b0f6bc46c16bba74"
+  },
+  "service_id": {
+    "$oid": "692f3d791166b1727bd9d46d"
+  },
+  "contractor_id": {
+    "$oid": "6931a93ef651b481edd5da86"
+  },
+  "address": {
+    "line1": "1",
+    "city": "1",
+    "postalCode": "1"
+  },
+  "rejected_by": [],
+  "issue_images": [],
+  "status": "in_progress",
+  "createdAt": {
+    "$date": "2025-12-05T09:57:13.500Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-06T20:03:04.097Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6932adf7213549af4805d787"
+  },
+  "customer_id": {
+    "$oid": "692fff09b0f6bc46c16bba74"
+  },
+  "service_id": {
+    "$oid": "692f3d791166b1727bd9d478"
+  },
+  "contractor_id": {
+    "$oid": "69300ab739d6b0e7c2beeeca"
+  },
+  "address": {
+    "line1": "221 Baker Street",
+    "city": "London",
+    "postalCode": "400001"
+  },
+  "rejected_by": [],
+  "issue_images": [],
+  "status": "completed",
+  "createdAt": {
+    "$date": "2025-12-05T10:03:35.820Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-06T20:02:16.190Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6932afb1213549af4805d7b4"
+  },
+  "customer_id": {
+    "$oid": "692fff09b0f6bc46c16bba74"
+  },
+  "service_id": {
+    "$oid": "692f3d791166b1727bd9d474"
+  },
+  "contractor_id": null,
+  "address": {
+    "line1": "221 Baker Street",
+    "city": "London",
+    "postalCode": "400001"
+  },
+  "rejected_by": [],
+  "issue_images": [],
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-12-05T10:10:57.050Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T10:10:57.050Z"
+  },
+  "__v": 0
+}]

@@ -1,0 +1,38 @@
+// /middleware/authMiddleware.js
+const jwt = require("jsonwebtoken");
+
+/**
+ * isAuthenticated
+ * Verifies Bearer token and attaches decoded payload to req.user
+ * Expected decoded payload: { id, email, role }
+ */
+exports.isAuthenticated = (req, res, next) => {
+  const authHeader = req.headers.authorization;
+
+  if (!authHeader || !authHeader.startsWith("Bearer ")) {
+    return res.status(401).json({ success: false, message: "Unauthorized: Token missing" });
+  }
+
+  try {
+    const token = authHeader.split(" ")[1];
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    req.user = decoded; // { id, email, role }
+    next();
+  } catch (err) {
+    return res.status(401).json({ success: false, message: "Unauthorized: Invalid token" });
+  }
+};
+
+/**
+ * authorizeRoles(...)
+ * Restricts route to one or more roles. Example: authorizeRoles('admin','contractor')
+ */
+exports.authorizeRoles = (...allowedRoles) => {
+  return (req, res, next) => {
+    console.log("Authorizing roles:", allowedRoles, "for user role:", req.user?.role);
+    if (!req.user || !allowedRoles.includes(req.user.role)) {
+      return res.status(403).json({ success: false, message: "Forbidden: You do not have permission" });
+    }
+    next();
+  };
+};

@@ -1,0 +1,393 @@
+[{
+  "_id": {
+    "$oid": "692f3d791166b1727bd9d46b"
+  },
+  "name": "AC Repair",
+  "description": "Inspection and repair of non-working or low-cooling air conditioners.",
+  "basePrice": 499,
+  "category": "HVAC",
+  "iconUrl": "/icons/ac_repair.png",
+  "updatedAt": {
+    "$date": "2025-12-02T19:29:55.319Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "692f3d791166b1727bd9d46c"
+  },
+  "name": "AC Cleaning",
+  "description": "Deep cleaning of indoor and outdoor AC units for better cooling performance.",
+  "basePrice": 699,
+  "category": "HVAC",
+  "iconUrl": "/icons/ac_cleaning.png"
+},
+{
+  "_id": {
+    "$oid": "692f3d791166b1727bd9d46d"
+  },
+  "name": "AC Installation",
+  "description": "Installation of split or window AC units including mounting and basic setup.",
+  "basePrice": 1599,
+  "category": "HVAC",
+  "iconUrl": "/icons/ac_installation.png"
+},
+{
+  "_id": {
+    "$oid": "692f3d791166b1727bd9d46e"
+  },
+  "name": "AC Gas Refill",
+  "description": "Gas top-up and leak check for split/window AC systems.",
+  "basePrice": 1499,
+  "category": "HVAC",
+  "iconUrl": "/icons/ac_gas.png"
+},
+{
+  "_id": {
+    "$oid": "692f3d791166b1727bd9d46f"
+  },
+  "name": "Furnace Tune-up",
+  "description": "Complete maintenance check and cleaning for home furnaces.",
+  "basePrice": 1299,
+  "category": "HVAC",
+  "iconUrl": "/icons/furnace.png"
+},
+{
+  "_id": {
+    "$oid": "692f3d791166b1727bd9d470"
+  },
+  "name": "Heating System Repair",
+  "description": "Diagnosis and repair of home heating units or thermostats.",
+  "basePrice": 799,
+  "category": "HVAC",
+  "iconUrl": "/icons/heating.png"
+},
+{
+  "_id": {
+    "$oid": "692f3d791166b1727bd9d471"
+  },
+  "name": "Tap Repair",
+  "description": "Fixing leaking or stuck faucets in kitchen or bathroom.",
+  "basePrice": 249,
+  "category": "Plumbing",
+  "iconUrl": "/icons/tap_repair.png"
+},
+{
+  "_id": {
+    "$oid": "692f3d791166b1727bd9d472"
+  },
+  "name": "Tap Replacement",
+  "description": "Replacing old or damaged taps with new ones.",
+  "basePrice": 399,
+  "category": "Plumbing",
+  "iconUrl": "/icons/tap_replace.png"
+},
+{
+  "_id": {
+    "$oid": "692f3d791166b1727bd9d473"
+  },
+  "name": "Bathroom Blockage Removal",
+  "description": "Clearing blocked drains in washbasins, toilets, or bathrooms.",
+  "basePrice": 499,
+  "category": "Plumbing",
+  "iconUrl": "/icons/drain_block.png"
+},
+{
+  "_id": {
+    "$oid": "692f3d791166b1727bd9d474"
+  },
+  "name": "Shower Installation / Repair",
+  "description": "Installation or repair of shower mixers and pipelines.",
+  "basePrice": 599,
+  "category": "Plumbing",
+  "iconUrl": "/icons/shower.png"
+},
+{
+  "_id": {
+    "$oid": "692f3d791166b1727bd9d475"
+  },
+  "name": "Water Leakage Fix",
+  "description": "Inspection and solution for hidden or visible pipeline leaks.",
+  "basePrice": 499,
+  "category": "Plumbing",
+  "iconUrl": "/icons/leakage.png"
+},
+{
+  "_id": {
+    "$oid": "692f3d791166b1727bd9d476"
+  },
+  "name": "Switch Board Repair",
+  "description": "Repair or replacement of faulty switches, sockets or boards.",
+  "basePrice": 199,
+  "category": "Electrical",
+  "iconUrl": "/icons/switchboard.png"
+},
+{
+  "_id": {
+    "$oid": "692f3d791166b1727bd9d477"
+  },
+  "name": "Fan Repair",
+  "description": "Repair of ceiling, table, or wall fans including capacitor changes.",
+  "basePrice": 249,
+  "category": "Electrical",
+  "iconUrl": "/icons/fan_repair.png"
+},
+{
+  "_id": {
+    "$oid": "692f3d791166b1727bd9d478"
+  },
+  "name": "Fan Installation",
+  "description": "Installation of ceiling fans with proper wiring checks.",
+  "basePrice": 349,
+  "category": "Electrical",
+  "iconUrl": "/icons/fan_install.png"
+},
+{
+  "_id": {
+    "$oid": "692f3d791166b1727bd9d479"
+  },
+  "name": "Light / Fancy Light Installation",
+  "description": "Installation of LED, panel lights, chandeliers or decorative lights.",
+  "basePrice": 299,
+  "category": "Electrical",
+  "iconUrl": "/icons/light_install.png"
+},
+{
+  "_id": {
+    "$oid": "692f3d791166b1727bd9d47a"
+  },
+  "name": "MCB / Breaker Repair",
+  "description": "Diagnosis and replacement of faulty breakers and electrical panels.",
+  "basePrice": 599,
+  "category": "Electrical",
+  "iconUrl": "/icons/mcb.png"
+},
+{
+  "_id": {
+    "$oid": "692f3d791166b1727bd9d47b"
+  },
+  "name": "Washing Machine Repair",
+  "description": "Diagnosis and repair of fully-automatic or semi-automatic washing machines.",
+  "basePrice": 499,
+  "category": "Appliances",
+  "iconUrl": "/icons/wm_repair.png"
+},
+{
+  "_id": {
+    "$oid": "692f3d791166b1727bd9d47c"
+  },
+  "name": "Refrigerator Repair",
+  "description": "Cooling issues, gas leaks, sensor problems and other fridge repairs.",
+  "basePrice": 599,
+  "category": "Appliances",
+  "iconUrl": "/icons/fridge.png"
+},
+{
+  "_id": {
+    "$oid": "692f3d791166b1727bd9d47d"
+  },
+  "name": "Microwave Repair",
+  "description": "Repair of heating, display, or fuse-related microwave issues.",
+  "basePrice": 349,
+  "category": "Appliances",
+  "iconUrl": "/icons/microwave.png"
+},
+{
+  "_id": {
+    "$oid": "692f3d791166b1727bd9d47e"
+  },
+  "name": "TV Installation",
+  "description": "Wall mounting and setup for LED/LCD TVs.",
+  "basePrice": 399,
+  "category": "Appliances",
+  "iconUrl": "/icons/tv_install.png"
+},
+{
+  "_id": {
+    "$oid": "692f3d791166b1727bd9d47f"
+  },
+  "name": "Bathroom Cleaning",
+  "description": "Deep cleaning of bathroom tiles, taps, floors, WC, and glass.",
+  "basePrice": 499,
+  "category": "Cleaning",
+  "iconUrl": "/icons/bathroom_clean.png"
+},
+{
+  "_id": {
+    "$oid": "692f3d791166b1727bd9d480"
+  },
+  "name": "Kitchen Deep Cleaning",
+  "description": "Degreasing and cleaning of cabinets, chimney exterior and surfaces.",
+  "basePrice": 899,
+  "category": "Cleaning",
+  "iconUrl": "/icons/kitchen_clean.png"
+},
+{
+  "_id": {
+    "$oid": "692f3d791166b1727bd9d481"
+  },
+  "name": "Full Home Cleaning",
+  "description": "Complete home cleaning including rooms, fans, lights, windows, floors.",
+  "basePrice": 2499,
+  "category": "Cleaning",
+  "iconUrl": "/icons/home_clean.png"
+},
+{
+  "_id": {
+    "$oid": "692f3d791166b1727bd9d482"
+  },
+  "name": "Sofa Cleaning",
+  "description": "Shampoo and deep vacuum cleaning of sofa seats.",
+  "basePrice": 699,
+  "category": "Cleaning",
+  "iconUrl": "/icons/sofa_clean.png"
+},
+{
+  "_id": {
+    "$oid": "692f3d791166b1727bd9d483"
+  },
+  "name": "Furniture Repair",
+  "description": "Minor repairs for beds, chairs, tables, hinges and woodwork.",
+  "basePrice": 299,
+  "category": "Handyman",
+  "iconUrl": "/icons/furniture.png"
+},
+{
+  "_id": {
+    "$oid": "692f3d791166b1727bd9d484"
+  },
+  "name": "Curtain Rod Installation",
+  "description": "Installation of curtain rods and window fixtures.",
+  "basePrice": 199,
+  "category": "Handyman",
+  "iconUrl": "/icons/curtain.png"
+},
+{
+  "_id": {
+    "$oid": "692f3d791166b1727bd9d485"
+  },
+  "name": "Drilling & Hanging",
+  "description": "Drilling for photo frames, shelves, mirror or small wall fittings.",
+  "basePrice": 149,
+  "category": "Handyman",
+  "iconUrl": "/icons/drilling.png"
+},
+{
+  "_id": {
+    "$oid": "692f3d791166b1727bd9d486"
+  },
+  "name": "Room Painting",
+  "description": "Single room painting with basic or premium paint options.",
+  "basePrice": 1999,
+  "category": "Painting & Renovation",
+  "iconUrl": "/icons/painting.png"
+},
+{
+  "_id": {
+    "$oid": "692f3d791166b1727bd9d487"
+  },
+  "name": "Wall Patching / Drywall Repair",
+  "description": "Repairing cracks, holes or damaged drywall with finishing.",
+  "basePrice": 699,
+  "category": "Painting & Renovation",
+  "iconUrl": "/icons/wall_patch.png"
+},
+{
+  "_id": {
+    "$oid": "692f3d791166b1727bd9d488"
+  },
+  "name": "Floor Polishing",
+  "description": "Polishing of marble, tiles or wooden floors.",
+  "basePrice": 1499,
+  "category": "Painting & Renovation",
+  "iconUrl": "/icons/flooring.png"
+},
+{
+  "_id": {
+    "$oid": "692f3d791166b1727bd9d489"
+  },
+  "name": "Lawn Cutting",
+  "description": "Grass cutting and trimming of residential lawns.",
+  "basePrice": 799,
+  "category": "Outdoor",
+  "iconUrl": "/icons/lawn.png"
+},
+{
+  "_id": {
+    "$oid": "692f3d791166b1727bd9d48a"
+  },
+  "name": "Landscaping",
+  "description": "Garden design, soil leveling and plant installation.",
+  "basePrice": 1499,
+  "category": "Outdoor",
+  "iconUrl": "/icons/landscape.png"
+},
+{
+  "_id": {
+    "$oid": "692f3d791166b1727bd9d48b"
+  },
+  "name": "Tree Trimming",
+  "description": "Cutting and shaping overgrown trees.",
+  "basePrice": 999,
+  "category": "Outdoor",
+  "iconUrl": "/icons/tree.png"
+},
+{
+  "_id": {
+    "$oid": "692f3d791166b1727bd9d48c"
+  },
+  "name": "Pressure Washing",
+  "description": "High-pressure cleaning of driveways, patios or building exterior.",
+  "basePrice": 599,
+  "category": "Outdoor",
+  "iconUrl": "/icons/pressure.png"
+},
+{
+  "_id": {
+    "$oid": "692f3d791166b1727bd9d48d"
+  },
+  "name": "Smart Doorbell Installation",
+  "description": "Installation and setup of smart video doorbells.",
+  "basePrice": 499,
+  "category": "Smart Home",
+  "iconUrl": "/icons/doorbell.png"
+},
+{
+  "_id": {
+    "$oid": "692f3d791166b1727bd9d48e"
+  },
+  "name": "CCTV Camera Installation",
+  "description": "Setup and configuration of CCTV/IP cameras.",
+  "basePrice": 999,
+  "category": "Smart Home",
+  "iconUrl": "/icons/cctv.png"
+},
+{
+  "_id": {
+    "$oid": "692f3d791166b1727bd9d48f"
+  },
+  "name": "General Pest Control",
+  "description": "Cockroach, ant and general household pest treatment.",
+  "basePrice": 799,
+  "category": "Pest Control",
+  "iconUrl": "/icons/pest.png"
+},
+{
+  "_id": {
+    "$oid": "692f3d791166b1727bd9d490"
+  },
+  "name": "Bed Bug Treatment",
+  "description": "Chemical treatment for bed bug infestation.",
+  "basePrice": 1499,
+  "category": "Pest Control",
+  "iconUrl": "/icons/bedbug.png"
+},
+{
+  "_id": {
+    "$oid": "692f3d791166b1727bd9d491"
+  },
+  "name": "Junk Removal",
+  "description": "Removal of old furniture, appliances and household junk.",
+  "basePrice": 999,
+  "category": "Junk Removal",
+  "iconUrl": "/icons/junk.png"
+}]

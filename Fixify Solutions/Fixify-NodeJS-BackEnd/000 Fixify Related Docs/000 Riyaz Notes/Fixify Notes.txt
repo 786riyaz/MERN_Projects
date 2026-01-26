@@ -1,0 +1,73 @@
+Sample Website ::: 
+https://jiffyondemand.com/
+
+Figma Website :::
+https://www.figma.com/design/8fyMUsee6vhFwzdqHyaeg9/Sahayaak---For-DEV?node-id=0-1&p=f&t=VX8wSzDGC1LWzpBo-0
+
+ChatGPT Chat :: 
+https://chatgpt.com/share/692a8ad5-4718-8009-a6ad-f5772dfcbcc4
+============================================================================
+Modules
+	Customer
+		Service Booking
+		Booking History and invoices
+		Messaging with text and photos
+		Rating System
+		Chat, Phone, AI ChatBox
+	Contractor
+		Sign Up, Profile Creation, Contract Execution
+		Upload of licence, Insurance, ID for Verification
+		Job Offer Notification
+		Send Quote
+		Job Status Updates and Earning Dashboard, 
+	Admin
+		Contractor Verification
+		Job Monitoring and manual assignment options
+		Payment and Commission management
+		Reporting Dashboard
+		Refund/dispute tools and promo management, Marketing or Push notification options 
+	Payment & Anti-Bypass Controls 
+		Secure payments through the platform 
+		Work estimates and invoices must be created inside the platform 
+		Warranties available only for platform-paid jobs 
+		Optional phone-number masking or call routing 
+		Photo-based quote validation to reduce off-platform 
+===================================================================================
+Core Responsibilities
+	Designing the architecture (database, APIs, workflows)
+	Building secure REST APIs
+	Authentication & Authorization (JWT + refresh tokens)
+	Contractor verification process
+	Booking engine (job creation, status updates, assignment)
+	Real-time notifications system
+	Messaging between customer ↔ contractor
+	Payments integration (Stripe or Razorpay)
+	Admin dashboard backend
+	Deployment (Dev → Staging → Production)
+======================================================================================
+| Module                    | Updated Estimated Hours |
+| ------------------------- | ----------------------- |
+| Auth System               | 22–28 hrs               |
+| Contractor Onboarding     | 40–50 hrs               |
+| Customer Module           | 18–22 hrs               |
+| Services Module           | 20–26 hrs               |
+| Booking Engine            | 55–65 hrs               |
+| Payments                  | 40–50 hrs               |
+| Chat System               | 30–38 hrs               |
+| Admin Panel Backend       | 40–50 hrs               |
+| Notifications             | 15–20 hrs               |
+| Deployment + Optimization | 30–38 hrs               |
+| Testing + Revisions       | 40–45 hrs               |
+≈ 350–382 hours
+======================================================================================
+MongoDB Atlas (small but production-suitable cluster): ~ US $56.94/month
+AWS for hosting + some storage (backend + static files + images): US $5–20/month (or more if traffic/storage grows)
+Notification service (OneSignal free tier): US $0–19/month
+SMS/OTP via Twilio: depends heavily on number of messages — e.g. 1000 SMS → ~$8.30 (if $0.0083 each)
+Payment gateway (Razorpay): no monthly cost; you pay per transaction (2–3% of transaction amount)
+Email service: likely negligible for low volume (when using free tiers)
+So in early stage, it is quite possible to have total external-services cost under US $80–100/month
+In development stage we will try to use the free-tier of each service
+======================================================================================
+Payment Related doubt replace with QR Code
+Costomer Contractor Communication
